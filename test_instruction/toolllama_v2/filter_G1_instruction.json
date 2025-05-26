@@ -1,0 +1,1439 @@
+[
+    {
+        "api_list": [
+            {
+                "category_name": "Advertising",
+                "tool_name": "asdfadsf",
+                "api_name": "Get Products in Category",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "limit",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": ""
+                    },
+                    {
+                        "name": "skip",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": ""
+                    },
+                    {
+                        "name": "category",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "products": "empty list",
+                    "summary": {
+                        "count": "int"
+                    }
+                }
+            },
+            {
+                "category_name": "Advertising",
+                "tool_name": "asdfadsf",
+                "api_name": "Get Order",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "statusCode": "int",
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Advertising",
+                "tool_name": "asdfadsf",
+                "api_name": "Get Products",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "skip",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": ""
+                    },
+                    {
+                        "name": "limit",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "products": [
+                        {
+                            "id": "int",
+                            "name": "str",
+                            "category": "NoneType",
+                            "_list_length": 10
+                        }
+                    ],
+                    "summary": {
+                        "count": "int"
+                    }
+                }
+            },
+            {
+                "category_name": "Advertising",
+                "tool_name": "asdfadsf",
+                "api_name": "Get Categories",
+                "api_description": " ",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "categories": [
+                        {
+                            "category": "NoneType",
+                            "_list_length": 872
+                        }
+                    ]
+                }
+            },
+            {
+                "category_name": "Advertising",
+                "tool_name": "asdfadsf",
+                "api_name": "Get Product",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "statusCode": "int",
+                    "message": "str"
+                }
+            }
+        ],
+        "query": "I want to know the list of categories available in the advertising tool. Also, get the product details for the products in the 'Electronics' category.",
+        "relevant APIs": [
+            [
+                "asdfadsf",
+                "Get Categories"
+            ],
+            [
+                "asdfadsf",
+                "Get Products in Category"
+            ]
+        ],
+        "query_id": 13095
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Energy",
+                "tool_name": "Regionalkonzept Strom Herkunft",
+                "api_name": "erzeugung",
+                "api_description": "Endpunkt erlaubt eine Liste der Postleitzahlenbereiche zu erhalten, in denen Verbraucher sein dürfen, die  von einer Erzeugungsanlage von angegebener Postleitzahl ihren Strom beziehen sollen.\n\n**Regionaler Herkunftsnachweis**\nBei Verwendung von Regionalnachweisen dürfen Stromversorger nun in ihrer Stromkennzeichnung ausweisen, dass der von ihnen gelieferte EEG-Strom aus Anlagen in der Region der Verbraucherin oder des Verbrauchers kommt.  [weitere Informationen](https://www.umweltbundesamt.de/dokument/rnr-regionenkonzept-2021/)\n\n**Verwendung**\n`/erzeugung?postleitzahl=10117 `\n\nLiefert eine Liste der Postleitzahlen, an der eine Verbraucher sein darf, damit der Strom als regionaler Ökostrom bezeichnet werden darf, wenn dessen Netzeinspeisung (Erzeuger) in der Postleitzahl `10117` stattfindet.\n\nDatenstand: 2021",
+                "required_parameters": [
+                    {
+                        "name": "postleitzahl",
+                        "type": "STRING",
+                        "description": "Postleitzahl der Erzeugungsanlage, für die eine Liste der Postleitzahlen von Verbrauchergebiete einers regionalen Ökostrombezugs erstellt werden soll.",
+                        "default": "01609"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Energy",
+                "tool_name": "Regionalkonzept Strom Herkunft",
+                "api_name": "Strommix",
+                "api_description": "Resultierender Strommix nach Anwendung der regionalen Ökostromerzeugung im Gebiet einer Postleitzahl.",
+                "required_parameters": [
+                    {
+                        "name": "postleitzahl",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "69168"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Energy",
+                "tool_name": "Regionalkonzept Strom Herkunft",
+                "api_name": "entnahme",
+                "api_description": "Endpunkt erlaubt eine Liste der Postleitzahlenbereiche zu erhalten, in denen Erzeugungsanlagen sein dürfen, die  für einen Verbraucher (Entnahme) an gegebener Postleitzahl ist.\n\n**Regionaler Herkunftsnachweis**\nBei Verwendung von Regionalnachweisen dürfen Stromversorger nun in ihrer Stromkennzeichnung ausweisen, dass der von ihnen gelieferte EEG-Strom aus Anlagen in der Region der Verbraucherin oder des Verbrauchers kommt.  [weitere Informationen](https://www.umweltbundesamt.de/dokument/rnr-regionenkonzept-2021/)\n\n**Verwendung**\n`/entnahme?postleitzahl=10117 `\n\nLiefert eine Liste der Postleitzahlen, an der eine Erzeugungsanlage sein darf, damit der Strom als regionaler Ökostrom bezeichnet werden darf, wenn die Netzentnahme (Verbrauch) in der Postleitzahl `10117` stattfindet.\n\nDatenstand: 2021",
+                "required_parameters": [
+                    {
+                        "name": "postleitzahl",
+                        "type": "STRING",
+                        "description": "Postleitzahl des Verbrauchers (Entnahmestelle)",
+                        "default": "09669"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            }
+        ],
+        "query": "My friends and I are interested in understanding the relationship between power generation and consumption in different zip codes. Can you provide us with a list of zip codes where a generation facility can supply power to consumers located in a specific zip code? For example, if we provide the zip code 88888, we would like to receive a list of zip codes where a generation facility can supply power to consumers in the zip code 88888.",
+        "relevant APIs": [
+            [
+                "Regionalkonzept Strom Herkunft",
+                "erzeugung"
+            ],
+            [
+                "Regionalkonzept Strom Herkunft",
+                "entnahme"
+            ]
+        ],
+        "query_id": 16196
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Communication",
+                "tool_name": "Veriphone",
+                "api_name": "verify",
+                "api_description": "Global phone number verification",
+                "required_parameters": [
+                    {
+                        "name": "phone",
+                        "type": "STRING",
+                        "description": "The phone number to verify",
+                        "default": "+4915123577723"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "default_country",
+                        "type": "STRING",
+                        "description": "The default country in a 2 letters ISO format. Example: US, RU.  Optional: the country will be infered from the prefix, from this parameter or from the IP address (in that order).",
+                        "default": ""
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "status": "str",
+                    "phone": "str",
+                    "phone_valid": "bool",
+                    "phone_type": "str",
+                    "phone_region": "str",
+                    "country": "str",
+                    "country_code": "str",
+                    "country_prefix": "str",
+                    "international_number": "str",
+                    "local_number": "str",
+                    "e164": "str",
+                    "carrier": "str"
+                }
+            },
+            {
+                "category_name": "Communication",
+                "tool_name": "Veriphone",
+                "api_name": "example",
+                "api_description": "Get an example phone number for any country",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "country_code",
+                        "type": "STRING",
+                        "description": "The example number's country in a 2 letters ISO format. Example: US, RU.  Optional: the country will be infered from the IP address if this parameter is absent or invalid.",
+                        "default": "GB"
+                    },
+                    {
+                        "name": "type",
+                        "type": "STRING",
+                        "description": "The type of example number to return. Values: fixed_line, mobile , premium_rate, shared_cost, toll_free, voip",
+                        "default": "mobile"
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "status": "str",
+                    "phone_type": "str",
+                    "country_code": "str",
+                    "country_prefix": "str",
+                    "international_number": "str",
+                    "local_number": "str",
+                    "e164": "str"
+                }
+            }
+        ],
+        "query": "I want to check if the phone number +4915123577723 is valid and get the phone type, region, and carrier details. It would also be helpful to provide an example phone number for a VoIP type in the United Kingdom.",
+        "relevant APIs": [
+            [
+                "Veriphone",
+                "verify"
+            ],
+            [
+                "Veriphone",
+                "example"
+            ]
+        ],
+        "query_id": 16970
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Location",
+                "tool_name": "Uganda API",
+                "api_name": "Directions Between 2 Locations",
+                "api_description": "This endpoint returns information about the route between two locations in terms of distance, duration, and steps.\n\nBelow Example: **Directions from a location in Nansana to Kampala**",
+                "required_parameters": [
+                    {
+                        "name": "end_lat",
+                        "type": "NUMBER",
+                        "description": "Latitude of the ending point (required)",
+                        "default": "0.32493795000000003"
+                    },
+                    {
+                        "name": "start_lat",
+                        "type": "NUMBER",
+                        "description": "Latitude of the starting point (required)",
+                        "default": "0.365816"
+                    },
+                    {
+                        "name": "end_lon",
+                        "type": "NUMBER",
+                        "description": "Longitude of the ending point (required)",
+                        "default": "32.57523607707668"
+                    },
+                    {
+                        "name": "start_lon",
+                        "type": "NUMBER",
+                        "description": "Longitude of the starting point (required)",
+                        "default": "32.529226"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "distance_unit",
+                        "type": "STRING",
+                        "description": "Unit of distance measurement, valid options are **km** (default), and **mi**.",
+                        "default": "km"
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "distance": "str",
+                    "duration": "str",
+                    "steps": [
+                        {
+                            "direction": "str",
+                            "distance": "str",
+                            "duration": "str",
+                            "instruction": "str",
+                            "location": [
+                                "list of float with length 2"
+                            ],
+                            "_list_length": 18
+                        }
+                    ]
+                }
+            },
+            {
+                "category_name": "Location",
+                "tool_name": "Uganda API",
+                "api_name": "Reverse Geocode",
+                "api_description": "This endpoint allows you to perform reverse geocoding in Uganda by providing query parameters for latitude and longitude. It returns the name of the city where the location is located.",
+                "required_parameters": [
+                    {
+                        "name": "lon",
+                        "type": "STRING",
+                        "description": "The longitude of the location.",
+                        "default": "32.57523607707668"
+                    },
+                    {
+                        "name": "lat",
+                        "type": "STRING",
+                        "description": "The latitude of the location.",
+                        "default": "0.32493795000000003"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "amenity": "str",
+                    "boundingbox": [
+                        "list of str with length 4"
+                    ],
+                    "category": "str",
+                    "city": "str",
+                    "country": "str",
+                    "display_name": "str",
+                    "region": "str",
+                    "suburb": "str"
+                }
+            },
+            {
+                "category_name": "Location",
+                "tool_name": "Uganda API",
+                "api_name": "Facilities Lookup",
+                "api_description": "This endpoint allows you to get facilities in Uganda like hospital, bank, college, etc. by providing optional query parameters for facility type, region and city. It returns a list of facilities that match the query parameters.",
+                "required_parameters": [
+                    {
+                        "name": "region",
+                        "type": "STRING",
+                        "description": "The region where the facility is located",
+                        "default": "Central"
+                    },
+                    {
+                        "name": "type",
+                        "type": "STRING",
+                        "description": "The type of amenity facility to search for (default: **hospital**)\nOptions:\n**aerodrome, bar, cafe, fast_food, pub, restaurant, college, driving_school, school, university, bank, atm, pharmacy,** etc..        \n\n[More options->](https://wiki.openstreetmap.org/wiki/Map_features#Amenity)",
+                        "default": "hospital"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "limit",
+                        "type": "STRING",
+                        "description": "The number of facilities to query.",
+                        "default": "10"
+                    },
+                    {
+                        "name": "city",
+                        "type": "STRING",
+                        "description": "The city where the facility is located",
+                        "default": "Kampala"
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "hospital": [
+                        {
+                            "ISO3166-2-lvl4": "str",
+                            "address": "str",
+                            "amenity": "str",
+                            "country_code": "str",
+                            "county": "str",
+                            "display_name": "str",
+                            "latitude": "str",
+                            "longitude": "str",
+                            "postcode": "str",
+                            "region": "str",
+                            "road": "str",
+                            "suburb": "str",
+                            "village": "str",
+                            "website": "str",
+                            "_list_length": 10
+                        }
+                    ]
+                }
+            },
+            {
+                "category_name": "Location",
+                "tool_name": "Uganda API",
+                "api_name": "Geocode",
+                "api_description": "This endpoint allows you to lookup locations in Uganda by providing an address query parameter. It returns the latitude, longitude and city name of the location.",
+                "required_parameters": [
+                    {
+                        "name": "address",
+                        "type": "STRING",
+                        "description": "Name of address",
+                        "default": "Nansana"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "display_name": "str",
+                    "latitude": "str",
+                    "longitude": "str"
+                }
+            },
+            {
+                "category_name": "Location",
+                "tool_name": "Uganda API",
+                "api_name": "Measure Distance",
+                "api_description": "This endpoint calculates the distance between two locations based on their latitude and longitude coordinates, while allowing the user to specify the unit of measurement.\n\nBelow Example: **Distance from Nansana to Kampala**",
+                "required_parameters": [
+                    {
+                        "name": "lat1",
+                        "type": "NUMBER",
+                        "description": "Latitude of the first location (required)",
+                        "default": "0.365816"
+                    },
+                    {
+                        "name": "lat2",
+                        "type": "NUMBER",
+                        "description": "Latitude of the second location (required)",
+                        "default": "0.32493795000000003"
+                    },
+                    {
+                        "name": "lon2",
+                        "type": "NUMBER",
+                        "description": "Longitude of the second location (required)",
+                        "default": "32.57523607707668"
+                    },
+                    {
+                        "name": "lon1",
+                        "type": "NUMBER",
+                        "description": "Longitude of the first location (required)",
+                        "default": "32.529226"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "unit",
+                        "type": "STRING",
+                        "description": "Unit of distance measurement, valid options are **km** (default), **mi**, **ft**, and **yd**.\n",
+                        "default": "km"
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "distance": "str",
+                    "duration": "str",
+                    "unit": "str"
+                }
+            }
+        ],
+        "query": "I'm a researcher studying the wildlife in Uganda and I need to find a research center in Kampala. Can you provide me with a list of research centers in Kampala? I would also like to know the distance and directions from my accommodation in Nansana to the research center.",
+        "relevant APIs": [
+            [
+                "Uganda API",
+                "Facilities Lookup"
+            ],
+            [
+                "Uganda API",
+                "Directions Between 2 Locations"
+            ]
+        ],
+        "query_id": 22781
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Social",
+                "tool_name": " Quotes API",
+                "api_name": "get_quotes_by_max_char_count",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "max_char_count",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Social",
+                "tool_name": " Quotes API",
+                "api_name": "get_quotes_by_keyword",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "keyword",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {}
+            },
+            {
+                "category_name": "Social",
+                "tool_name": " Quotes API",
+                "api_name": "get_quotes_by_source",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "source",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {}
+            },
+            {
+                "category_name": "Social",
+                "tool_name": " Quotes API",
+                "api_name": "get_random_quote",
+                "api_description": " ",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "id": "int",
+                    "source": "str",
+                    "quote": "str",
+                    "char_count": "int"
+                }
+            }
+        ],
+        "query": "I'm a content creator working on a project about happiness. Can you provide me with quotes about happiness with a maximum character count of 100? Additionally, could you give me quotes from different sources like Aristotle, Dalai Lama, and Albert Einstein?",
+        "relevant APIs": [
+            [
+                " Quotes API",
+                "get_quotes_by_max_char_count"
+            ],
+            [
+                " Quotes API",
+                "get_quotes_by_source"
+            ]
+        ],
+        "query_id": 22937
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Social",
+                "tool_name": "Twitter_v5",
+                "api_name": "Get User Replies",
+                "api_description": "Get User Replies By ID\n\nYou can get the user(rest_id) query from \"Get User By Username\" endpoint",
+                "required_parameters": [
+                    {
+                        "name": "user",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "2455740283"
+                    },
+                    {
+                        "name": "count",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "20"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "cursor",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Social",
+                "tool_name": "Twitter_v5",
+                "api_name": "Get User Tweets",
+                "api_description": "Get User Tweets By ID\n\nYou can get the user(rest_id) query from \"Get User By Username\" endpoint",
+                "required_parameters": [
+                    {
+                        "name": "count",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "20"
+                    },
+                    {
+                        "name": "user",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "2455740283"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "cursor",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Social",
+                "tool_name": "Twitter_v5",
+                "api_name": "Autocomplete",
+                "api_description": "Twitter Seach Query Autocomplete",
+                "required_parameters": [
+                    {
+                        "name": "value",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "MrB"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Social",
+                "tool_name": "Twitter_v5",
+                "api_name": "Search Twitter",
+                "api_description": "Search Twitter (Top, Latest, Videos, Photos and People)",
+                "required_parameters": [
+                    {
+                        "name": "type",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "Top"
+                    },
+                    {
+                        "name": "count",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "20"
+                    },
+                    {
+                        "name": "query",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "Mr Beast"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "cursor",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Social",
+                "tool_name": "Twitter_v5",
+                "api_name": "Get Post Retweets",
+                "api_description": "Get Post Retweets By Post ID",
+                "required_parameters": [
+                    {
+                        "name": "count",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "40"
+                    },
+                    {
+                        "name": "pid",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "1552735248026411010"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "cursor",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Social",
+                "tool_name": "Twitter_v5",
+                "api_name": "Get Post Quotes",
+                "api_description": "Get Post Quotes By Post ID",
+                "required_parameters": [
+                    {
+                        "name": "count",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "40"
+                    },
+                    {
+                        "name": "pid",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "1552735248026411010"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "cursor",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Social",
+                "tool_name": "Twitter_v5",
+                "api_name": "Get Post Comments",
+                "api_description": "Get Post Comments By Post ID",
+                "required_parameters": [
+                    {
+                        "name": "pid",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "1552735248026411010"
+                    },
+                    {
+                        "name": "count",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "40"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "cursor",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Social",
+                "tool_name": "Twitter_v5",
+                "api_name": "Get Post Likes",
+                "api_description": "Get Post Likes By Post ID",
+                "required_parameters": [
+                    {
+                        "name": "count",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "40"
+                    },
+                    {
+                        "name": "pid",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "1552735248026411010"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "cursor",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Social",
+                "tool_name": "Twitter_v5",
+                "api_name": "Get User Followings",
+                "api_description": "Get User Followings By ID. \n\nYou can get the user(rest_id) query from \"Get User By Username\" endpoint",
+                "required_parameters": [
+                    {
+                        "name": "count",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "20"
+                    },
+                    {
+                        "name": "user",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "2455740283"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "cursor",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Social",
+                "tool_name": "Twitter_v5",
+                "api_name": "Get User Followers",
+                "api_description": "Get User Followers By ID. \n\nYou can get the user(rest_id) query from \"Get User By Username\" endpoint",
+                "required_parameters": [
+                    {
+                        "name": "user",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "2455740283"
+                    },
+                    {
+                        "name": "count",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "20"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "cursor",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    }
+                ],
+                "method": "GET"
+            }
+        ],
+        "query": "I want to compile a list of the most popular tweets about a recent event on Twitter. Can you help me search for the top tweets related to the event and also retrieve the retweets, likes, and comments for each of these tweets? It would be great if you could provide the usernames of the users who retweeted and commented on the tweets.",
+        "relevant APIs": [
+            [
+                "Twitter_v5",
+                "Search Twitter"
+            ],
+            [
+                "Twitter_v5",
+                "Get Post Retweets"
+            ],
+            [
+                "Twitter_v5",
+                "Get Post Likes"
+            ],
+            [
+                "Twitter_v5",
+                "Get Post Comments"
+            ]
+        ],
+        "query_id": 23163
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Social",
+                "tool_name": "TikTok_Solutions",
+                "api_name": "General Trending",
+                "api_description": "**Trending videos** General",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Social",
+                "tool_name": "TikTok_Solutions",
+                "api_name": "Music Data by ID",
+                "api_description": "Get** Music Data **by **ID**",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Social",
+                "tool_name": "TikTok_Solutions",
+                "api_name": "Video Data by URL",
+                "api_description": "Get Video Data by U",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "url",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "https://www.tiktok.com/@mrbeast/video/7104724622674758954"
+                    }
+                ],
+                "method": "GET",
+                "template_response": "{\"status\": \"str\", \"data\": {\"aweme_detail\": {\"is_ads\": \"bool\", \"is_hash_tag\": \"int\", \"is_pgcshow\": \"bool\", \"prevent_download\": \"bool\", \"distribute_type\": \"int\", \"share_url\": \"str\", \"status\": {\"aweme_id\": \"str\", \"is_delete\": \"bool\", \"allow_share\": \"bool\", \"allow_comment\": \"bool\", \"private_status\": \"int\", \"in_reviewing\": \"bool\", \"reviewed\": \"int\", \"self_see\": \"bool\", \"is_prohibited\": \"bool\", \"download_status\": \"int\", \"review_result\": {\"review_status\": \"int\"}, \"video_mute\": {\"is_mute\": \"bool\", \"mute_desc\": \"str\"}}, \"rate\": \"int\", \"has_vs_entry\": \"bool\", \"need_vs_entry\": \"bool\", \"desc\": \"str\", \"music\": {\"id\": \"int\", \"id_str\": \"str\", \"title\": \"str\", \"author\": \"str\", \"album\": \"str\", \"cover_large\": {\"uri\": \"str\", \"url_list\": [\"list of str with length 2\"], \"width\": \"int\", \"height\": \"int\"}, \"cover_medium\": {\"uri\": \"str\", \"url_list\": [\"list of str with length 2\"], \"width\": \"int\", \"height\": \"int\"}, \"cover_thumb\": {\"uri\": \"str\", \"url_list\": [\"list of str with length 2\"], \"width\": \"int\", \"height\": \""
+            },
+            {
+                "category_name": "Social",
+                "tool_name": "TikTok_Solutions",
+                "api_name": "Hashtag Feed by ID",
+                "api_description": "Get **Hashtag Feed **by **ID**",
+                "required_parameters": [
+                    {
+                        "name": "challenge_id",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "5718"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Social",
+                "tool_name": "TikTok_Solutions",
+                "api_name": "User Data by SecUID",
+                "api_description": "Get User Data by SecUID",
+                "required_parameters": [
+                    {
+                        "name": "sec_user_id",
+                        "type": "string",
+                        "description": "",
+                        "default": "MS4wLjABAAAABKjQkOz_IIzXXzEAl_9LGsWhvK-gBnlczwRPXK8EmxAp6K3X0qiaP5_OEqmm0XwG"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": "{\"status\": \"str\", \"data\": {\"status_code\": \"int\", \"user\": {\"account_type\": \"int\", \"avatar_168x168\": {\"uri\": \"str\", \"url_list\": [\"list of str with length 2\"]}, \"avatar_300x300\": {\"uri\": \"str\", \"url_list\": [\"list of str with length 2\"]}, \"avatar_larger\": {\"uri\": \"str\", \"url_list\": [\"list of str with length 2\"]}, \"avatar_medium\": {\"uri\": \"str\", \"url_list\": [\"list of str with length 2\"]}, \"avatar_thumb\": {\"uri\": \"str\", \"url_list\": [\"list of str with length 2\"]}, \"aweme_count\": \"int\", \"commerce_user_info\": {\"ad_experience_entry\": \"bool\", \"ad_experience_text\": \"str\", \"ad_revenue_rits\": \"empty list\"}, \"custom_verify\": \"str\", \"follower_count\": \"int\", \"following_count\": \"int\", \"ins_id\": \"str\", \"nickname\": \"str\", \"original_musician\": {\"digg_count\": \"int\", \"music_count\": \"int\", \"music_used_count\": \"int\"}, \"privacy_setting\": {\"following_visibility\": \"int\"}, \"sec_uid\": \"str\", \"share_info\": {\"share_url\": \"str\", \"share_desc\": \"str\", \"share_title\": \"str\", \"bool_persist\": \"int\", \"share_desc_info\": \"str\""
+            },
+            {
+                "category_name": "Social",
+                "tool_name": "TikTok_Solutions",
+                "api_name": "Hashtag Feed by Name",
+                "api_description": "Get **Hashtag Feed **by **Name**",
+                "required_parameters": [
+                    {
+                        "name": "challenge_name",
+                        "type": "string",
+                        "description": "",
+                        "default": "Food"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Social",
+                "tool_name": "TikTok_Solutions",
+                "api_name": "User Feed by Name",
+                "api_description": "Get **User Feed** by **Name**",
+                "required_parameters": [
+                    {
+                        "name": "username",
+                        "type": "string",
+                        "description": "",
+                        "default": "mrbeast"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Social",
+                "tool_name": "TikTok_Solutions",
+                "api_name": "User Feed by ID",
+                "api_description": "Get **User Feed** by** ID**",
+                "required_parameters": [
+                    {
+                        "name": "user_id",
+                        "type": "string",
+                        "description": "",
+                        "default": "6614519312189947909"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Social",
+                "tool_name": "TikTok_Solutions",
+                "api_name": "User Data by Name",
+                "api_description": "Get** User Data** by** Name**",
+                "required_parameters": [
+                    {
+                        "name": "username",
+                        "type": "string",
+                        "description": "",
+                        "default": "mrbeast"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": "{\"status\": \"str\", \"data\": {\"status_code\": \"int\", \"user\": {\"account_type\": \"int\", \"avatar_168x168\": {\"uri\": \"str\", \"url_list\": [\"list of str with length 2\"]}, \"avatar_300x300\": {\"uri\": \"str\", \"url_list\": [\"list of str with length 2\"]}, \"avatar_larger\": {\"uri\": \"str\", \"url_list\": [\"list of str with length 2\"]}, \"avatar_medium\": {\"uri\": \"str\", \"url_list\": [\"list of str with length 2\"]}, \"avatar_thumb\": {\"uri\": \"str\", \"url_list\": [\"list of str with length 2\"]}, \"aweme_count\": \"int\", \"commerce_user_info\": {\"ad_experience_entry\": \"bool\", \"ad_experience_text\": \"str\", \"ad_revenue_rits\": \"empty list\"}, \"custom_verify\": \"str\", \"follower_count\": \"int\", \"following_count\": \"int\", \"ins_id\": \"str\", \"nickname\": \"str\", \"original_musician\": {\"digg_count\": \"int\", \"music_count\": \"int\", \"music_used_count\": \"int\"}, \"privacy_setting\": {\"following_visibility\": \"int\"}, \"sec_uid\": \"str\", \"share_info\": {\"share_url\": \"str\", \"share_desc\": \"str\", \"share_title\": \"str\", \"bool_persist\": \"int\", \"share_desc_info\": \"str\""
+            },
+            {
+                "category_name": "Social",
+                "tool_name": "TikTok_Solutions",
+                "api_name": "Hashtag Data by Name",
+                "api_description": "Get Hashtag Data by using Name of Hashtag",
+                "required_parameters": [
+                    {
+                        "name": "challenge_name",
+                        "type": "string",
+                        "description": "",
+                        "default": "food"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "status": "str",
+                    "data": {
+                        "ch_info": {
+                            "view_count": "int",
+                            "type": "int",
+                            "user_count": "int",
+                            "cid": "str",
+                            "cha_name": "str"
+                        },
+                        "status_code": "int"
+                    }
+                }
+            }
+        ],
+        "query": "I'm curious about the popularity of a specific hashtag on TikTok. Can you provide me with the hashtag data for the challenge 'food'? Additionally, fetch me the music data for a specific music ID.",
+        "relevant APIs": [
+            [
+                "TikTok_Solutions",
+                "Hashtag Data by Name"
+            ],
+            [
+                "TikTok_Solutions",
+                "Music Data by ID"
+            ]
+        ],
+        "query_id": 23248
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Entertainment",
+                "tool_name": "Anime Jokes",
+                "api_name": "Search jokes by anime name",
+                "api_description": "Search jokes using anime name",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Entertainment",
+                "tool_name": "Anime Jokes",
+                "api_name": "Get jokes using page",
+                "api_description": "Enter the page number to get the jokes",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Entertainment",
+                "tool_name": "Anime Jokes",
+                "api_name": "Get anime by ID",
+                "api_description": "Search anime using ID",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "1"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Entertainment",
+                "tool_name": "Anime Jokes",
+                "api_name": "Get animes",
+                "api_description": "Get all the anime from Anime Jokes",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Entertainment",
+                "tool_name": "Anime Jokes",
+                "api_name": "Search jokes",
+                "api_description": "Search jokes using the keywords of joke",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Entertainment",
+                "tool_name": "Anime Jokes",
+                "api_name": "Query joke using ID",
+                "api_description": "Search anime joke using joke ID",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "4"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Entertainment",
+                "tool_name": "Anime Jokes",
+                "api_name": "Get all jokes",
+                "api_description": "Get all the jokes",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET"
+            }
+        ],
+        "query": "My friends and I are hosting an anime-themed event and we would love to include some anime jokes. Can you help us find jokes related to the anime 'One Piece' and also jokes that include the keyword 'how'? Additionally, we would like to browse through all the available anime jokes.",
+        "relevant APIs": [
+            [
+                "Anime Jokes",
+                "Search jokes by anime name"
+            ],
+            [
+                "Anime Jokes",
+                "Search jokes"
+            ],
+            [
+                "Anime Jokes",
+                "Get all jokes"
+            ]
+        ],
+        "query_id": 23982
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Entertainment",
+                "tool_name": "Riddlie ",
+                "api_name": "Flag Riddle",
+                "api_description": "With this endpoint, you can flag a riddle. This helps the API developer to finetune the API for better service in the future.  You can only use four flags sending the number corresponding to the flag type as below:\n\n0: for flagging the riddle as \"Duplicate\"\n1: for flagging the riddle as \"Inappropriate\"\n2: for flagging the riddle as \"Not a Riddle\"\n3: for flagging the riddle as \"Missing Information\"",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "string",
+                        "description": "",
+                        "default": "63bdef027183b71946b64ee6"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "flag",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "0"
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Entertainment",
+                "tool_name": "Riddlie ",
+                "api_name": "Update Level",
+                "api_description": "This endpoint enables you to update the level of the Riddle. All the riddles are set to a medium level which is enumerated as \"1\".  You can suggest the level of a riddle by simply calling this endpoint with query parameters \"0\", \"1\", or \"2\". \n\"0\" is Easy\n\"1\" is Medium \n\"2\" is Hard",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "string",
+                        "description": "",
+                        "default": "63bdef027183b71946b64ee6"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "level",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "1"
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Entertainment",
+                "tool_name": "Riddlie ",
+                "api_name": "Riddle by Keyword",
+                "api_description": "Get one random riddle around a specific subject or keyword. For example, a riddle on a \"cat\".",
+                "required_parameters": [
+                    {
+                        "name": "keyword",
+                        "type": "string",
+                        "description": "",
+                        "default": "cat"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Entertainment",
+                "tool_name": "Riddlie ",
+                "api_name": "Riddle by Difficulty Level",
+                "api_description": "Get one random riddle based on the difficulty. For example, by Easy, Medium, Hard.",
+                "required_parameters": [
+                    {
+                        "name": "level",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "easy"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Entertainment",
+                "tool_name": "Riddlie ",
+                "api_name": "Riddle by ID",
+                "api_description": "Get a riddle by ID.",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "string",
+                        "description": "",
+                        "default": "63bdef027183b71946b64ee6"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "id",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "63bdef0283b194664ee6c121"
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Entertainment",
+                "tool_name": "Riddlie ",
+                "api_name": "Upvote Riddle",
+                "api_description": "Simply calling this endpoint registers a \"like\" to better serve the riddles in the future. There is no response back other than a status message.",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "string",
+                        "description": "",
+                        "default": "63bdef027183b71946b64ee6"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Entertainment",
+                "tool_name": "Riddlie ",
+                "api_name": "Get Riddle of the Day",
+                "api_description": "With this endpoint, you can request a riddle of the day. Each day API will serve a different riddle with an answer and other details.",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Entertainment",
+                "tool_name": "Riddlie ",
+                "api_name": "Get Random Riddle",
+                "api_description": "This endpoint responds with a new random riddle with an answer and other details.",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET"
+            }
+        ],
+        "query": "I want to flag the riddle with ID 63bdef027183b71946b64ee6 as inappropriate. Please fetch a random riddle around the keyword 'food' and provide the difficulty level. Also, fetch the riddle of the day and upvote it.",
+        "relevant APIs": [
+            [
+                "Riddlie ",
+                "Flag Riddle"
+            ],
+            [
+                "Riddlie ",
+                "Riddle by Keyword"
+            ],
+            [
+                "Riddlie ",
+                "Get Riddle of the Day"
+            ],
+            [
+                "Riddlie ",
+                "Upvote Riddle"
+            ]
+        ],
+        "query_id": 24146
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Data",
+                "tool_name": "Generate LinkedIn Leads",
+                "api_name": "Get Available Job Titles",
+                "api_description": "Get Available Job Titles which could be used in /leads/leads/ endpoint",
+                "required_parameters": [
+                    {
+                        "name": "name",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "fou"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "id": "str",
+                    "value": "str"
+                }
+            },
+            {
+                "category_name": "Data",
+                "tool_name": "Generate LinkedIn Leads",
+                "api_name": "Get Available Locations",
+                "api_description": "Get Available Locations which could be used in /leads/leads/ endpoint",
+                "required_parameters": [
+                    {
+                        "name": "name",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "United"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "id": "str",
+                    "value": "str"
+                }
+            },
+            {
+                "category_name": "Data",
+                "tool_name": "Generate LinkedIn Leads",
+                "api_name": "Get Available Companies",
+                "api_description": "Get Available Companies which could be used in /leads/leads/ endpoint",
+                "required_parameters": [
+                    {
+                        "name": "name",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "app"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "id": "str",
+                    "value": "str"
+                }
+            }
+        ],
+        "query": "I am an HR manager looking to expand my talent pool. Can you retrieve the available job titles for 'human resources' and the available locations in 'Chicago'? Additionally, fetch a list of companies related to 'manufacturing'.",
+        "relevant APIs": [
+            [
+                "Generate LinkedIn Leads",
+                "Get Available Job Titles"
+            ],
+            [
+                "Generate LinkedIn Leads",
+                "Get Available Locations"
+            ],
+            [
+                "Generate LinkedIn Leads",
+                "Get Available Companies"
+            ]
+        ],
+        "query_id": 26063
+    }
+]
