@@ -86,7 +86,7 @@ Here's a step-by-step guide on how to run:
   - Start the RapidAPI service server.  
   - Verify that the service is accessible at the configured endpoint (e.g., `http://localhost:8080/rapidapi`).  
   - Ensure all required tools/APIs are registered and configured in the service.  
-
+  - For more details, please refer to the [ToolBench](https://github.com/OpenBMB/ToolBench).
 
 #### **2. Set the `PYTHONPATH` Environment Variable**  
 - **Purpose**: The `PYTHONPATH` ensures Python can locate modules and packages in the project root directory.  
